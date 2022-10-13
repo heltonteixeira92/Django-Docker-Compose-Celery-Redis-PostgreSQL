@@ -29,7 +29,7 @@ All three work together to make some `asynchronous` magic.
 
 > redis-server
 
-#####settings.py
+##### settings.py
     
     # Configures Redis as the datastore between Django + Celery
     CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
@@ -37,7 +37,7 @@ All three work together to make some `asynchronous` magic.
     # Save Celery task results in redis db
     CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 
-#####celery.py
+##### celery.py
 
     import os
     from celery import Celery
@@ -88,7 +88,8 @@ All three work together to make some `asynchronous` magic.
         total = x * (y * random.randint(3, 100))
         return total
 
-###refers: 
+### refers: 
+ - https://docs.docker.com/engine/reference/commandline/compose_run/
  - https://docs.celeryq.dev/en/latest/userguide/periodic-tasks.html
  - https://www.codingforentrepreneurs.com/blog/celery-redis-django/
  - https://www.youtube.com/watch?v=oBQxFn1CDno
