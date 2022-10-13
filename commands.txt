@@ -1,0 +1,6 @@
+docker-compose run django
+docker-compose run up
+docker exec -it django sh
+    # python manage.py shell
+        >>> from app.tasks import add
+        >>> add.delay(2, 2)
