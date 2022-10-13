@@ -1,5 +1,5 @@
 docker-compose run django
-docker-compose run up
+docker-compose up
 docker exec -it django sh
     # python manage.py shell
         >>> from app.tasks import add
